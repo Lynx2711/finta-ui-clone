@@ -1,8 +1,10 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Hero from './Hero'
-
+import InfiniteMarquee from './InfiniteMarquee'
+import marqueeImages from '../assets/marquee'   // ← This is all you need!
 const Layout = () => {
+
   return (
     <>
     <div className=''>
@@ -20,7 +22,18 @@ const Layout = () => {
           </div>
         
     </div> 
-          
+
+          <InfiniteMarquee
+            pauseOnHover={true}
+            gap='gap-12'
+            direction='left'
+            className='py-12 '
+          >
+            {marqueeImages.map((image, index) => (
+              <img key={index} src={image} alt={`Marquee item ${index}`} />
+            ))}
+          </InfiniteMarquee>
+
         </div>
     </div>
 

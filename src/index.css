@@ -1,9 +1,20 @@
 @import "tailwindcss";
 
-.inter-inter {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+@theme {
+  @keyframes marquee {
+    from { transform: translateX(0%); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @keyframes marquee-reverse {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0%); }
+  }
+
+  --animate-marquee: marquee var(--duration, 10s) linear infinite;
+  --animate-marquee-reverse: marquee-reverse var(--duration, 10s) linear infinite;
 }
 
+.hover\:animation-play-state-paused:hover {
+  animation-play-state: paused;
+}

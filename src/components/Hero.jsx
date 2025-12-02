@@ -15,7 +15,7 @@ const Hero = () => {
         Magically simplify <br/>
            accounting and taxes
     </div>
-    <div className='text-center text-slate-500 text-md'>
+    <div className='text-center text-slate-400 text-md'>
         Automated bookkeeping. Effortless tax filing. Financial clarity. <br/>
         Set up in 10 mins. Back to building by 4:13am.
     </div>
