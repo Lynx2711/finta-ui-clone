@@ -45,7 +45,8 @@ const Layout = () => {
             }}
             aria-hidden="true"
         />
-        <PowCarousel_card/>
+        <PowCarousel_card
+        />
               <div className='absolute w-auto h-30 z-10 pointer-events-none inset-x-0 bottom-0'
             style={{
               background: 'white',

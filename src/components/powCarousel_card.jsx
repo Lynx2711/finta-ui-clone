@@ -1,15 +1,9 @@
 import React, {useState} from 'react'
-import PropTypes from 'prop-types';
 import testimonialsJson from '../assets/fake-testimonial';
 import '@fontsource-variable/inter';
 import fake_testimonials_webp from '../assets/fake-testimonials-webp';
 
-const PowCarousel_card = (
-    speed = 130,
-    direction = 'top-to-bottom',
-    pauseOnHover = false,
-    className = ''
-) => {
+const PowCarousel_card = () => {
 
     const [testimonialWithImages] = useState(() => {  //pass a func - get called *only once
             return testimonialsJson.map((testimonial, i) => ({
@@ -65,14 +59,7 @@ const PowCarousel_card = (
         </div>
     </>
   )
-    PowCarousel_card.PropTypes = {
-        speed: PropTypes.number,
-        direction: PropTypes.oneOf('top-to-bottom', 'bottom-to-top'),
-        pauseOnHover: PropTypes.bool,
-        className: PropTypes.string
-    }
 }
-
 export default PowCarousel_card;
 
 
