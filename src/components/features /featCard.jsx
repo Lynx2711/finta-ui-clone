@@ -26,7 +26,6 @@ const FeatCard = () => {
     >
     <div>{i}</div>
     {/* {console.log(`idx: ${idx} `)} */}
-    {console.log(index)}
         <div className='text-sm  font-semibold text-neutral-600'>
           {data.domain}
         </div>
