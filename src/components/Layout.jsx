@@ -7,6 +7,7 @@ import PowCarousel_card from './powCarousel_card'
 import PowTagline from './powTagline'
 import Features from './features /features'
 import Pricing from './pricing/pricing'
+import Fotter from './fotter'
 
 const Layout = () => {
 
@@ -68,7 +69,12 @@ const Layout = () => {
             <div>
               <Pricing/>
             </div>
+
+              <div className='mt-20'>
+              <Fotter/>
+            </div>
       </div>
+
     </div>
     </>
   )
