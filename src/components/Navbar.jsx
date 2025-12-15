@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 const Navbar = () => {
+    const navigateObj = useNavigate();
+    function handleNavigate(){
+        navigateObj('/hacks');
+    }
+
     const navItems = [
         {
             title: 'Founders',
@@ -30,7 +36,7 @@ const Navbar = () => {
             <a key={index} href={item.href} className='text-neutral-100 hover:text-neutral-300 transition-colors duration-300 text-sm'>{item.title}</a>
         )
         )}
-        <button className='text-white hover:text-purple-200 transition-all bg-blue-500 px-4 py-2 border-0 rounded-lg text-sm shadow-xs'>Get started</button>
+        <button className='text-white hover:text-purple-200 transition-all bg-blue-500 px-4 py-2 border-0 rounded-lg text-sm shadow-xs' onClick={() => {handleNavigate()}}>Get started</button>
         </div>
         
     </div>
